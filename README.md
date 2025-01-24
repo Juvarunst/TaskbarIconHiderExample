@@ -1,3 +1,94 @@
+TaskbarIconHider Sample Project Documentation (UE5.3.2 Version)
+=
+Project Overview
+-
+This sample demonstrates how to dynamically hide taskbar icons for specified processes on Windows platform using the TaskbarIconHider plugin. Built with Unreal Engine 5.3.2, suitable for applications requiring precise control over taskbar display states.
+
+Plugin Acquisition
+-
+✅ Requires purchasing official plugin from Unreal Engine Marketplace
+
+❌ This sample project does NOT include plugin binaries or source code
+
+
+Runtime Environment
+-
+Unreal Engine 5.3.2
+
+Windows 10/11 64-bit
+
+Visual Studio 2022 17.5+
+
+
+Project Configuration Guide
+-
+
+Plugin Installation Procedure
+
+Extract purchased plugin package to project directory:
+
+    YourProject/
+        └── Plugins/
+            └── TaskbarIconHider/
+                ├── Resources/
+                ├── Source/ 
+                └── TaskbarIconHider.uplugin
+
+        
+Enabling the Plugin:
+-
+After launching engine, navigate to Edit > Plugins
+
+Search and enable "TaskbarIconHider" plugin
+
+Restart editor to activate
+
+
+Core Functionality Demonstration
+-
+C++ API Usage:
+
+// Get current process ID (example)
+int32 CurrentPID = FPlatformProcess::GetCurrentProcessId();
+
+// Hide icon by process ID
+UTaskbarIconHiderBPLibrary::HideIconByProcessID(CurrentPID);
+
+
+Blueprint Node Explanation:
+
+[Right-click in Blueprint Graph] > Add Action > TaskbarIcon Hider
+
+└── Hide Icon By Process ID (int32)
+
+
+Packaging Instructions
+-
+
+Build through standard packaging process with no special configuration required.
+
+
+License Agreement
+-
+
+This plugin uses BSD-3-Clause License:
+
+Copyright (c) 2025 Steven Collins <steven_collins@mail.com>
+
+Free to use/modify/distribute with copyright notice preserved. See LICENSE file for details.
+
+
+Technical Support
+-
+
+Contact developer:
+
+📧 steven_collins@mail.com
+
+⚠️ Note: This functionality modifies window style (WS_EX_TOOLWINDOW). Some security software may flag this as suspicious behavior.
+
+---
+
 TaskbarIconHider 示例工程说明（UE5.3.2 版）
 =
 项目概述
