@@ -58,9 +58,7 @@ Technical Support
 Developer Contact:  
 📧 steven_collins@mail.com  
 
-⚠️ Technical Notes:  
--
-The functionality is implemented via window style modification (WS_EX_TOOLWINDOW). Some security software may trigger false positives due to this low-level operation.  
+⚠️ Technical Notes:The functionality is implemented via window style modification (WS_EX_TOOLWINDOW). Some security software may trigger false positives due to this low-level operation.  
 
 ---
 
