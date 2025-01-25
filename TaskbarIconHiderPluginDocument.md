@@ -19,12 +19,12 @@ Installation & Configuration Guide
 -
 Extract the plugin to your target project directory:  
 
-YourProject/  
-    └── Plugins/  
-        └── TaskbarIconHider/  
-            ├── Resources/  
-            ├── Source/  
-            └── TaskbarIconHider.uplugin  
+    YourProject/  
+        └── Plugins/  
+            └── TaskbarIconHider/  
+                ├── Resources/  
+                ├── Source/  
+                └── TaskbarIconHider.uplugin
             
 Activation Steps:  
 -
@@ -58,7 +58,8 @@ Technical Support
 Developer Contact:  
 📧 steven_collins@mail.com  
 
-⚠️ Technical Notes:The functionality is implemented via window style modification (WS_EX_TOOLWINDOW). Some security software may trigger false positives due to this low-level operation.  
+⚠️ Technical Notes:  
+The functionality is implemented via window style modification (WS_EX_TOOLWINDOW). Some security software may trigger false positives due to this low-level operation.  
 
 ---
 
