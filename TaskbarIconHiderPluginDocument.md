@@ -18,7 +18,6 @@ Visual Studio 2022 17.5+
 安装配置指南
 -
 
-部署流程  
 解压插件至目标工程目录：
 
     YourProject/  
