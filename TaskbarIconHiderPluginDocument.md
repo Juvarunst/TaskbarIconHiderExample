@@ -37,8 +37,27 @@ Visual Studio 2022 17.5+
 -
 
 **C++ 调用方式**：
-```cpp
 // 获取当前进程ID（典型用法）
+int32 CurrentPID = FPlatformProcess::GetCurrentProcessId();
+
+// 执行图标隐藏操作
+UTaskbarIconHiderBPLibrary::HideIconByProcessID(CurrentPID);
+
+**蓝图节点路径**：
+[右键图表] > Add Action > TaskbarIcon Hider
+    └── Hide Icon By Process ID (int32)
+
+打包部署
+-
+支持常规打包流程，无需额外配置。
+
+技术支持
+-
+开发者联系方式：  
+📧 **steven_collins@mail.com**  
+
+⚠️ 技术说明：  
+底层通过设置窗口样式（`WS_EX_TOOLWINDOW`）实现功能，部分安全防护软件可能触发误报。
 int32 CurrentPID = FPlatformProcess::GetCurrentProcessId();
 
 // 执行图标隐藏操作
