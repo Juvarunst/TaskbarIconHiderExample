@@ -1,3 +1,69 @@
+TaskbarIconHider Plugin Documentation  
+=
+
+Feature Overview  
+-
+This plugin provides a complete solution for dynamically hiding taskbar icons of specified processes on Windows platforms, designed for application development requiring precise control over taskbar visibility.  
+
+Plugin Acquisition  
+-
+✅ Available exclusively through the Official Marketplace (genuine plugin purchase required)  
+
+Runtime Environment  
+-
+Unreal Engine  
+Windows 10/11 64-bit  
+Visual Studio 2022 17.5 or later  
+
+Installation & Configuration Guide  
+-
+Extract the plugin to your target project directory:  
+
+YourProject/  
+    └── Plugins/  
+        └── TaskbarIconHider/  
+            ├── Resources/  
+            ├── Source/  
+            └── TaskbarIconHider.uplugin  
+            
+Activation Steps:  
+-
+Navigate to Edit > Plugins after launching the engine  
+
+Search for and enable the "TaskbarIconHider" plugin  
+
+Restart the editor to complete loading  
+
+Core API Integration  
+-
+C++ Implementation:  
+
+// Retrieve current process ID (typical usage)  
+int32 CurrentPID = FPlatformProcess::GetCurrentProcessId();  
+
+// Execute icon hiding  
+UTaskbarIconHiderBPLibrary::HideIconByProcessID(CurrentPID);  
+
+Blueprint Node Path:
+-
+Right-click graph > Add Action > TaskbarIcon Hider  
+└── Hide Icon By Process ID (int32)  
+
+Packaging & Deployment  
+-
+Supports standard packaging workflows with no additional configuration required.  
+
+Technical Support  
+-
+Developer Contact:  
+📧 steven_collins@mail.com  
+
+⚠️ Technical Notes:  
+-
+The functionality is implemented via window style modification (WS_EX_TOOLWINDOW). Some security software may trigger false positives due to this low-level operation.  
+
+---
+
 TaskbarIconHider 插件说明
 =
 
